@@ -1,6 +1,7 @@
 #!/usr/bin/env python
 
 from pymongo import MongoClient
+import cgi
 print "Content-Type: text/html"
 print
 
