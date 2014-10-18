@@ -2,6 +2,7 @@
 
 from pymongo import MongoClient
 import cgi
+import random
 print "Content-Type: text/html"
 print
 
@@ -12,7 +13,6 @@ for key in fieldStorage.keys():
     params[ key ] = fieldStorage[ key ].value
     if not fieldStorage[ key ].value:
             params[ key ] = ""
-
 
 client = MongoClient()
 db = client['pbib']
