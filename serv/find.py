@@ -17,10 +17,15 @@ db = client['pbib']
 print "["
 # print "records with following filter:" + str(params)
 print
+item = params["item"]
+del params["item"]
+params["items"] = {"$regex": ".*" + item + ".*"}
+
 results = db.users.find(params)
 
 for result in results:
     result["_id"] = str(result["_id"])  #
+    result["item"] = item
     print json.dumps(dict(result), indent=4)
     print ", "
 print "]"
