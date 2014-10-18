@@ -7,9 +7,9 @@ import cgitb; cgitb.enable()  # # This line enables CGI error reporting
 
 server = BaseHTTPServer.HTTPServer
 handler = CGIHTTPServer.CGIHTTPRequestHandler
-server_address = ("", 80)
-handler.cgi_directories = ["/"]
-handler.headers
+server_address = ("", 8080)
+handler.cgi_directories = ["/serv"]
+
 httpd = server(server_address, handler)
 
 httpd.serve_forever()
