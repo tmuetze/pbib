@@ -20,7 +20,7 @@ print
 results = db.users.find(params)
 
 for result in results:
-    del result["_id"]
+    result["_id"] = str(result["_id"])
     print json.dumps(dict(result), indent=4)
     print ", "
 print "]"
