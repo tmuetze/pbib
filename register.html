@@ -1,13 +1,46 @@
 <!--  <form action="http://localhost:8080/serv/register.py"> -->
-<form action="http://pbib.it/cgi-bin/pbib/serv/register.py">
-your name:<br/>
-	<input name="username"></input><br/>
-phone number (44700000011):<br/>
-	<input name="phone"></input><br/>
-Stuff you have:<br/>
-	<input type="checkbox" name="lighter">lighter</input><br/>
-	<input type="checkbox" name="iphone4charger">iphone4charger</input><br/>
-	<input type="checkbox" name="iphone5charger">iphone5charger</input><br/>
-	<input type="checkbox" name="airbed">airbed</input><br/>
-	<input type="submit" value="Register"></input>
-</form>
+
+<head>
+	<script>
+	
+		function getLocation() {
+		    if (navigator.geolocation) {
+		        navigator.geolocation.getCurrentPosition(showPosition);
+		    } else { 
+		        x.innerHTML = "Geolocation is not supported by this browser.";
+		    }
+		}
+	
+		function showPosition(position) {
+		    //x.innerHTML="Latitude: " + position.coords.latitude + 
+		    //"<br>Longitude: " + position.coords.longitude;
+		    document.getElementById("latitude").value = position.coords.latitude;
+		    document.getElementById("longitude").value = position.coords.longitude;
+		}
+		
+	</script>
+</head>
+<body onload="getLocation()">
+	<form action="http://pbib.it/cgi-bin/pbib/serv/register.py">
+		your name:<br/>
+			<input name="username"></input><br/>
+		phone number (44700000011):<br/>
+			<input name="phone"></input><br/>
+			<input name="longitude" id="longitude" type="hidden"></input><br/>
+			<input name="latitude" id="latitude" type="hidden"></input><br/>
+		Stuff you have:<br/>
+			<input type="checkbox" name="lighter">lighter</input><br/>
+			<input type="checkbox" name="iphone4_charger">iphone4_charger</input><br/>
+			<input type="checkbox" name="iphone5_charger">iphone5_charger</input><br/>
+			<input type="checkbox" name="android_charger">android_charger</input><br/>
+			<input type="checkbox" name="headset">headset</input><br/>
+			<input type="checkbox" name="EU_adapter">EU_adapter</input><br/>
+			<input type="checkbox" name="android_charger">android_charger</input><br/>
+			<input type="checkbox" name="android_charger">android_charger</input><br/>
+			<input type="checkbox" name="android_charger">android_charger</input><br/>
+			<input type="checkbox" name="android_charger">android_charger</input><br/>
+		
+		
+		<input type="submit" value="Register"></input>
+	</form>
+</body>
