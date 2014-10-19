@@ -23,6 +23,8 @@ for (k, v) in params.items():
         params["items"] += k + ","
         del params[k]
 
+# push coordinates to esri
+
 db.users.insert(params)
 # link = "http://localhost:8080/search.html"
 link = "http://pbib.it/pbib/search.html"
