@@ -45,10 +45,27 @@
     <div class="splash" style="top:-70px;">
         <h0 class="splash-head">You messed up... but it's okay.</h0>
         <p class="splash-usbhead" style="color:black;font-size:150%">
-        <a href="http://pbib.it/pbib/register.html" class="pure-button pure-button-primary">Pay back</a><br/></br>
         
-            
-            Pay back using Paymill. 
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+		<form action="thanks.html" method="post">
+		    <script
+		        src="https://button.paymill.com/v1/"
+		        id="button"
+		        data-label="Pay back"
+		        data-title="Pay back"
+		        data-description="Pay it back"
+		        data-submit-button="Pay back your debt!"
+		        data-amount="5"
+		        data-currency="GBP"
+		        data-public-key="272757391693a4e53480f56393feb86c"
+		        data-elv="false" // Only for ELV payments
+		        data-lang="en-GB" // Optional language Code
+		        >
+		    </script>
+		</form>
+           
+           
+           <p style="color:white;font-size:150%;">            Pay back using Paymill. 
         </p>
         <p>
 		<img width="200" height="200" alt="Computer hope" src="img/logo.png">
