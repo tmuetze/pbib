@@ -21,13 +21,11 @@
 		padding: 0px;
 	} 
 
-
-
 body { 
-	background: #ffffff; 
+	background: #1e8dd5; 
 	margin: 0; 
 	height: 100%; 
-	color: #384452;
+	
 	font-family: 'Lato', sans-serif;
 	font-weight: 400;
 	}
@@ -44,7 +42,7 @@ p {
 	font-weight: 400;
 	font-size: 14px; 
 	line-height: 24px;
-	color: #384452; 
+	color: #1e8dd5; 
 	margin-top: 10px; 
 }
 
@@ -123,8 +121,7 @@ a:focus {
 }
 
 .dropdown-menu {
-	background: #39b3d7;
-	width: 340px
+	background: #384452;
 }
 
 .dropdown-menu > li > a {
@@ -133,18 +130,12 @@ a:focus {
 	font-size: 12px;
 }
 
-
 .btn-theme {
   color: #fff;
-  background-color: #39b3d7;
+  background-color: #384452;
   border-color: #384452;
   margin: 4px;
 }
-
-.btn-group {
-  background-color: #39b3d7;
-}
-
 .btn-theme:hover,
 .btn-theme:focus,
 .btn-theme:active,
@@ -224,12 +215,6 @@ a:focus {
 #headerwrap h3, h5 {
 	color: white;
 	font-weight: 400;
-}
-
-#ul.dropdown-menu-form {
-    padding: 5px 10px 0;
-    max-height: 300px;
-    overflow-y: scroll;
 }
 
 #headerwrap h1 {

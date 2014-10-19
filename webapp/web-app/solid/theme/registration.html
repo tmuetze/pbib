@@ -1,6 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
+
+	  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+  <title>Bootstrap Dropdown Checkbo</title>
+  <link rel="stylesheet" type="text/css" href="../dependencies/css/bootstrap.css" />
+  <link rel="stylesheet" type="text/css" href="../css/bootstrap-dropdown-checkbox.css" />
+  <link rel="stylesheet" type="text/css" href="css/main.css" />  
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -8,7 +15,7 @@
     <meta name="author" content="">
     <link rel="shortcut icon" href="assets/ico/favicon.ico">
 
-    <title>SOLID - Bootstrap 3 Theme</title>
+    <title>PBIB</title>
 
     <!-- Bootstrap core CSS -->
     <link href="assets/css/bootstrap.css" rel="stylesheet">
@@ -28,9 +35,14 @@
     <![endif]-->
     
     <script src="assets/js/modernizr.js"></script>
-  </head>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+ 
 
+  </head>
+ 
   <body>
+
+
 
     <!-- Fixed navbar -->
 <!--     <div class="navbar navbar-default navbar-fixed-top" role="navigation">
@@ -71,13 +83,27 @@
 			<div class="row">
 				<div class="col-lg-8 col-lg-offset-2">
 				
-					<h1>Find near me.</h1>
-					<h3>Please Bring It Back.</h3>
-					<h5>More Lorem Ipsum added here too.</h5>				
+					<h1>What can you lend to Hackers near you?</h1>
+
+  <div class="navbar">
+    <div class="navbar-inner">
+      <a class="brand" href="#">What can you lend to Hackers near you?</a>
+      <ul class="nav">
+        <li class="dropdown-checkbox-example dropdown-checkbox dropdown open"></li>
+        <li class="alternate-behaviour dropdown-checkbox dropdown open"></li>
+      </ul>
+    </div>
+  </div>
+  <p class="status" style="margin-top: 300px;">
+  </p>
+
+
+    				<h3>Be Nice.</h3>
+									
 				</div>
-				<div class="col-lg-8 col-lg-offset-2 himg">
+			<!-- 	<div class="col-lg-8 col-lg-offset-2 himg">
 					<img src="assets/img/browser.png" class="img-responsive">
-				</div>
+				</div> -->
 			</div><!-- /row -->
 	    </div> <!-- /container -->
 	</div><!-- /headerwrap -->
@@ -218,4 +244,67 @@
 })(jQuery);
 </script>
   </body>
+  <script type"text/javascript" src="assets/js/bootstrap.min.js"></script>
+ <script src="../dependencies/js/jquery.min.js"></script>
+<script src="../js/bootstrap-dropdown-checkbox.js"></script>
+<script>
+  function list(size, checked) {
+    var result = [];
+    for (var i = 0; i < size; i++) {
+      result.push({
+        id: i,
+        label: 'Item #' + i,
+        isChecked: checked === undefined ? !!(Math.round(Math.random() * 1)) : checked
+      });
+    }
+    return result;
+  }
+
+
+  var widget, alt;
+
+  var tab = [
+    { id: "1", label: "Forever.", isChecked: true },
+    { id: "2", label: "I love cheese.", isChecked: true },
+    { id: "3", label: "Meat for all", isChecked: false },
+    { id: "4", label: "Again and again", isChecked: true },
+    { id: "5", label: "Hey bro!", isChecked: true },
+    { id: "6", label: "It's working?", isChecked: false },
+    { id: "7", label: "Horse", isChecked: true },
+    { id: "8", label: "z-index", isChecked: true },
+    { id: "9", label: "language scala", isChecked: true },
+    { id: "10", label: "Yahoo", isChecked: true },
+    { id: "11", label: "yellow", isChecked: true },
+    { id: "12", label: "Gooooooooooogle", isChecked: true },
+    { id: "13", label: "NO WAY!", isChecked: false },
+    { id: "14", label: "2 times?", isChecked: true }
+  ];
+
+  function p(wat) {
+    return '<p>' + JSON.stringify(wat) + '</p>';
+  }
+
+  function updateStatus() {
+    var $p = $('p.status').empty();
+
+    $p.append(p(widget.checked()));
+    $p.append(p(alt.checked()));
+  }
+
+  $('.dropdown-checkbox-example').dropdownCheckbox({
+    data: tab,
+    autosearch: true,
+    title: "My Dropdown Checkbox",
+    hideHeader: false,
+    showNbSelected: true,
+    templateButton: '<a class="dropdown-checkbox-toggle" data-toggle="dropdown" href="#">Example Dropdown <span class="dropdown-checkbox-nbselected"></span><b class="caret"></b>'
+  });
+
+  $('.dropdown-checkbox-example').dropdownCheckbox("append",
+    { id: "15", label: "added by itself", isChecked: true });
+
+  $('body').on('change:dropdown-checkbox checked checked:all check:all uncheck:all check:checked uncheck:checked', updateStatus());
+  updateStatus()
+
+</script>
 </html>

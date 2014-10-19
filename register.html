@@ -19,27 +19,31 @@
 		}
 		
 	</script>
-	<link rel="stylesheet" type="text/css" href="css/mystyle.css">
+	<link rel="stylesheet" type="text/css" href="css/bootstrap.css">
 </head>
 <body onload="getLocation">
 	<form class="element" action="http://pbib.it/cgi-bin/pbib/serv/register.py">
-		Please enter your name:<br/>
+		Your name:<br/>
 			<input name="username"></input><br/>
-		Please enter your phone number (ie: 44700000011):<br/>
+		Your phone number (in this format: 44700000011):<br/>
 			<input name="phone"></input><br/>
 			<input name="longitude" id="longitude" type="hidden"></input><br/>
 			<input name="latitude" id="latitude" type="hidden"></input><br/>
-		Stuff you have:<br/>
+		Stuff you can to lend:<br/>
+		<div class="items1">
 			<input type="checkbox" name="Lighter">Lighter</input><br/>
 			<input type="checkbox" name="iPhone4_charger">iPhone4_charger</input><br/>
 			<input type="checkbox" name="iPhone5_charger">iPhone5_charger</input><br/>
 			<input type="checkbox" name="Android_charger">Android_charger</input><br/>
-			<input type="checkbox" name="headset">headset</input><br/>
+			<!-- <input type="checkbox" name="headset">headset</input><br/> -->
 			<input type="checkbox" name="EU_adapter">EU_adapter</input><br/>
 			<input type="checkbox" name="US_adapter">US_adapter</input><br/>
 			<input type="checkbox" name="Bottle_opener">Bottle_opener</input><br/>
 			<input type="checkbox" name="Airbed">Airbed</input><br/>
 			<input type="checkbox" name="Headset">Headset</input><br/>
+		</div>
+		<div class="button1">
 		<input type="submit" value="Register!"></input>
+		</div>
 	</form>
 </body>
