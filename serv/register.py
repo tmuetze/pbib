@@ -26,4 +26,4 @@ for (k, v) in params.items():
 db.users.insert(params)
 # link = "http://localhost:8080/search.html"
 link = "http://pbib.it/pbib/search.html"
-print "<meta http-equiv='refresh' content='0; URL=%s'>" % link
+print "<meta http-equiv='refresh' content='0; URL=%s'></meta>" % link
