@@ -25,4 +25,5 @@ for (k, v) in params.items():
 
 db.users.insert(params)
 link = "http://localhost:8080/search.html"
+link = "http://localhost:8080/search.html"
 print "<meta http-equiv='refresh' content='0; URL=%s'>" % link
