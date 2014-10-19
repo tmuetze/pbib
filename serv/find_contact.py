@@ -18,8 +18,12 @@ item = params["item"]
 del params["item"]
 params["items"] = {"$regex": ".*" + item + ".*"}
 
-user = db.users.find(params)[0]
+users = db.users.find(params)
 
+if users.count() == 0:
+    print "<h1> Sorry, there's no one with that item around</h1>"
+else:
+    user = users[0]
 phone = user["phone"]
 
 
@@ -29,7 +33,7 @@ link = "http://pbib.it/cgi-bin/pbib/serv/color.py?color=" + color
 msg = "Someone want's to borrow your %s, please open this link: %s" % (item, link)
 
 nexmo_url = "http://rest.nexmo.com/sms/json?from=pbib&type=text&api_key=0b8382bd&api_secret=7f52886c&to=%(phone)s&text=%(msg)s" % locals()
-print nexmo_url
+
 requests.get(nexmo_url)
 
-# print "<meta http-equiv='refresh' content='0; URL=%s'>" % link
+print "<meta http-equiv='refresh' content='0; URL=%s'>" % link
