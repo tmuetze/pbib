@@ -24,6 +24,6 @@ for (k, v) in params.items():
         del params[k]
 
 db.users.insert(params)
-link = "http://localhost:8080/search.html"
-link = "http://localhost:8080/search.html"
+# link = "http://localhost:8080/search.html"
+link = "http://pbib.it/pbib/search.html"
 print "<meta http-equiv='refresh' content='0; URL=%s'>" % link
